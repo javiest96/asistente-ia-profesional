@@ -1,0 +1,4 @@
+El almacén Cobre recibe entregas los martes a las 09:40 en la puerta 2.
+El almacén Plata recibe entregas los viernes a las 15:25 en la puerta 5.
+El almacén Cobre admite paquetes de hasta 12 kilogramos.
+El almacén Plata admite paquetes de hasta 9 kilogramos.

@@ -1,0 +1,39 @@
+{
+  "version": "h5-v1",
+  "evidencias": {
+    "cometa_entrena": {"documento": "club_cometa.txt", "texto": "El Club Cometa entrena los martes y jueves a las 19:00."},
+    "cometa_juega": {"documento": "club_cometa.txt", "texto": "El Club Cometa juega los sábados a las 10:00 en el Campo Norte."},
+    "cometa_entrenadora": {"documento": "club_cometa.txt", "texto": "La entrenadora del Club Cometa es Lucía Vega."},
+    "cometa_fundacion": {"documento": "club_cometa.txt", "texto": "El Club Cometa se fundó en 2018."},
+    "faro_juega": {"documento": "club_faro.txt", "texto": "El Club Faro juega los domingos a las 12:00 en el Campo Sur."},
+    "faro_entrenador": {"documento": "club_faro.txt", "texto": "El entrenador del Club Faro es Diego Sol."},
+    "faro_fundacion": {"documento": "club_faro.txt", "texto": "El Club Faro se fundó en 2021."},
+    "biblioteca_domingo": {"documento": "biblioteca_luna.txt", "texto": "La Biblioteca Luna cierra los domingos."},
+    "prestamo": {"documento": "biblioteca_luna.txt", "texto": "Los préstamos duran 14 días."},
+    "renovacion": {"documento": "biblioteca_luna.txt", "texto": "Se permite una renovación únicamente si no hay reservas del libro."},
+    "amarilla": {"documento": "normas_cometa.txt", "texto": "Tener una tarjeta amarilla no implica por sí solo expulsión."},
+    "alerta": {"documento": "normas_cometa.txt", "texto": "El entrenamiento del Club Cometa se suspende con alerta meteorológica naranja."}
+  },
+  "casos": [
+    {"id":"P01","grupo":"calibracion","tipo":"factual","pregunta":"¿Quién entrena al Cometa?","tiene_respuesta":true,"evidencias":["cometa_entrenadora"],"referencia":"Lucía Vega.","hechos":[["Lucía Vega"]],"incompatibles":["Diego Sol"]},
+    {"id":"P02","grupo":"validacion","tipo":"factual","pregunta":"¿Cuándo entrena el Cometa?","tiene_respuesta":true,"evidencias":["cometa_entrena"],"referencia":"Martes y jueves a las 19:00.","hechos":[["martes"],["jueves"],["19:00","siete de la tarde"]],"incompatibles":["domingos"]},
+    {"id":"P03","grupo":"calibracion","tipo":"factual","pregunta":"¿Cuándo juega el Cometa?","tiene_respuesta":true,"evidencias":["cometa_juega"],"referencia":"Sábado a las 10:00.","hechos":[["sábado"],["10:00","diez"]],"incompatibles":["domingo","12:00"]},
+    {"id":"P04","grupo":"validacion","tipo":"factual","pregunta":"¿Dónde juega el Cometa?","tiene_respuesta":true,"evidencias":["cometa_juega"],"referencia":"Campo Norte.","hechos":[["Campo Norte"]],"incompatibles":["Campo Sur"]},
+    {"id":"P05","grupo":"calibracion","tipo":"factual","pregunta":"¿Cuándo juega el Faro?","tiene_respuesta":true,"evidencias":["faro_juega"],"referencia":"Domingo a las 12:00.","hechos":[["domingo"],["12:00","doce"]],"incompatibles":["sábado","10:00"]},
+    {"id":"P06","grupo":"validacion","tipo":"factual","pregunta":"¿Quién entrena al Faro?","tiene_respuesta":true,"evidencias":["faro_entrenador"],"referencia":"Diego Sol.","hechos":[["Diego Sol"]],"incompatibles":["Lucía Vega"]},
+    {"id":"P07","grupo":"calibracion","tipo":"comparacion","pregunta":"¿Cuál de los dos clubes se fundó antes?","tiene_respuesta":true,"evidencias":["cometa_fundacion","faro_fundacion"],"referencia":"Cometa: 2018, anterior a Faro: 2021.","hechos":[["Cometa"],["2018"],["2021"]],"incompatibles":[]},
+    {"id":"P08","grupo":"validacion","tipo":"comparacion","pregunta":"¿Juegan ambos clubes en el mismo campo?","tiene_respuesta":true,"evidencias":["cometa_juega","faro_juega"],"referencia":"No. Cometa juega en Campo Norte y Faro en Campo Sur.","hechos":[["no"],["Campo Norte"],["Campo Sur"]],"incompatibles":[]},
+    {"id":"P09","grupo":"calibracion","tipo":"negacion","pregunta":"¿Abre la biblioteca los domingos?","tiene_respuesta":true,"evidencias":["biblioteca_domingo"],"referencia":"No, cierra los domingos.","hechos":[["no","cierra","cerrada"]],"incompatibles":[]},
+    {"id":"P10","grupo":"validacion","tipo":"factual","pregunta":"¿Cuánto dura un préstamo?","tiene_respuesta":true,"evidencias":["prestamo"],"referencia":"14 días.","hechos":[["14","catorce"],["días"]],"incompatibles":[]},
+    {"id":"P11","grupo":"calibracion","tipo":"negacion","pregunta":"¿Se puede renovar si otra persona ha reservado el libro?","tiene_respuesta":true,"evidencias":["renovacion"],"referencia":"No, la renovación requiere que no haya reservas.","hechos":[["no"],["reserva"]],"incompatibles":[]},
+    {"id":"P12","grupo":"validacion","tipo":"negacion","pregunta":"¿Una amarilla supone siempre expulsión?","tiene_respuesta":true,"evidencias":["amarilla"],"referencia":"No, por sí sola no implica expulsión.","hechos":[["no"],["por sí sola","por sí solo"]],"incompatibles":[]},
+    {"id":"P13","grupo":"calibracion","tipo":"factual","pregunta":"¿Qué ocurre con el entrenamiento durante una alerta naranja?","tiene_respuesta":true,"evidencias":["alerta"],"referencia":"Se suspende.","hechos":[["suspend","suspensión"]],"incompatibles":[]},
+    {"id":"P14","grupo":"calibracion","tipo":"sin_respuesta","pregunta":"¿Cuál es la contraseña wifi del Campo Norte?","tiene_respuesta":false,"evidencias":[],"contexto_referencia":["cometa_juega"],"referencia":"No consta esa información.","hechos":[],"incompatibles":[]},
+    {"id":"P15","grupo":"validacion","tipo":"sin_respuesta","pregunta":"¿Cuánto cuesta entrar a un partido del Cometa?","tiene_respuesta":false,"evidencias":[],"contexto_referencia":["cometa_juega"],"referencia":"No consta esa información.","hechos":[],"incompatibles":[]},
+    {"id":"P16","grupo":"calibracion","tipo":"sin_respuesta","pregunta":"¿Cuál es el teléfono de Lucía Vega?","tiene_respuesta":false,"evidencias":[],"contexto_referencia":["cometa_entrenadora"],"referencia":"No consta esa información.","hechos":[],"incompatibles":[]},
+    {"id":"P17","grupo":"validacion","tipo":"sin_respuesta","pregunta":"¿Quién patrocina al Faro?","tiene_respuesta":false,"evidencias":[],"contexto_referencia":["faro_juega"],"referencia":"No consta esa información.","hechos":[],"incompatibles":[]},
+    {"id":"P18","grupo":"calibracion","tipo":"sin_respuesta","pregunta":"¿Cuántos libros tiene la biblioteca?","tiene_respuesta":false,"evidencias":[],"contexto_referencia":["prestamo"],"referencia":"No consta esa información.","hechos":[],"incompatibles":[]},
+    {"id":"P19","grupo":"validacion","tipo":"premisa_falsa","pregunta":"Como el Cometa juega el domingo, ¿a qué hora empieza?","tiene_respuesta":true,"evidencias":["cometa_juega"],"referencia":"La premisa es incorrecta: juega el sábado a las 10:00.","hechos":[["sábado"],["10:00","diez"]],"incompatibles":[]},
+    {"id":"P20","grupo":"validacion","tipo":"sin_respuesta","pregunta":"¿Qué teléfono comparte la entrenadora con el patrocinador?","tiene_respuesta":false,"evidencias":[],"contexto_referencia":["cometa_entrenadora"],"referencia":"No constan el teléfono ni ese vínculo.","hechos":[],"incompatibles":[]}
+  ]
+}

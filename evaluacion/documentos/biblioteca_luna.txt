@@ -1,0 +1,4 @@
+La Biblioteca Luna abre de lunes a viernes de 09:00 a 18:00.
+La Biblioteca Luna cierra los domingos.
+Los préstamos duran 14 días.
+Se permite una renovación únicamente si no hay reservas del libro.

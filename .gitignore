@@ -1,0 +1,33 @@
+# Documentos e informes
+Documentos/
+!evaluacion/documentos/
+evaluacion/documentos/*
+!evaluacion/documentos/club_cometa.txt
+!evaluacion/documentos/club_faro.txt
+!evaluacion/documentos/biblioteca_luna.txt
+!evaluacion/documentos/normas_cometa.txt
+Informes/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Resultados de evaluaciones
+resultados_rag.json
+
+# Archivos de prueba
+prueba.txt
+entrenamiento.txt
+
+# Ejercicios antiguos
+1 - Primeros pasos/
+
+# Configuración privada
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Entornos virtuales
+.venv/
+venv/

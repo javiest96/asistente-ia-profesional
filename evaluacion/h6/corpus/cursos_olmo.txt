@@ -1,0 +1,4 @@
+El curso Olmo comienza el 12 de mayo de 2027 en el aula Azul.
+El curso Sauce comienza el 20 de junio de 2027 en el aula Verde.
+El curso Olmo dura 8 semanas.
+El curso Sauce dura 5 semanas.
